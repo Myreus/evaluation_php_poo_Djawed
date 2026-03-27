@@ -26,7 +26,7 @@ composer install
 ```env
 DATABASE_USERNAME=root
 DATABASE_PASSWORD=
-DATABASE_NAME=todolist
+DATABASE_NAME=games
 DATABASE_HOST=localhost:3306
 ```
 

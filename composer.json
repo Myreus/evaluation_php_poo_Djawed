@@ -1,5 +1,5 @@
 { 
-    "name": "mithridatem/evaluation_php_poo",
+    "name": "myreus/projet_todolist_fork_djawed",
     "autoload": {
         "psr-4": {
             "App\\": "src/"
