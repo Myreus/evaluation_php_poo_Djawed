@@ -44,21 +44,31 @@ class Game
         return $this;
     }
 
-    public function getPublish_at(): \DateTime
+    public function getType(): string
+    {
+        return $this->type;
+    }
+    public function setType(string $type): self 
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    public function getPublishAt(): \DateTime
     {
         return $this->publish_at;
     }
-    public function setPublish_at(\DateTime $publish_at): self 
+    public function setPublishAt(\DateTime $publish_at): self 
     {
         $this->publish_at = $publish_at;
         return $this;
     }
 
-    public function getManufacturer(): Console
+    public function getConsole(): Console
     {
         return $this->console;
     }
-    public function setManufacturer(?Console $console): self
+    public function setConsole(?Console $console): self
     {
         $this->console = $console;
         return $this;

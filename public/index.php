@@ -20,13 +20,13 @@ $gameController = new GameController();
 
 //Router
 switch ($path) {
-        case '/':
+        case '/public/':
             $homeController->index();
             break;
-        case '/game/add':
+        case '/public/game/add':
             $gameController->addGame();
             break;
-        case '/games':
+        case '/public/games':
             $gameController->showAllGames();
             break;
         default:

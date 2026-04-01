@@ -14,8 +14,8 @@
             <input type="date" name="publish_at" placeholder="Saisir la date de publication du jeu">
             <select name="console">
                 <?php 
-                foreach($console as $key => $value){
-                    echo "<option>" . $this->value . "</option>";
+                foreach($allConsoles as $key => $value){
+                    echo "<option>" . $value->getName() . "</option>";
                 } 
                 
                 ?>

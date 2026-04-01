@@ -25,7 +25,16 @@ class GameRepository
      * @return void
      * @throws \Exception Erreurs SQL
      */
-    public function saveGame(Game $game): void {}
+    public function saveGame(Game $game): void {
+        $sql = "INSERT INTO video_game(title, `type`, publish_at, console_id) VALUES (?, ?, ?, ?)";
+        $req = $this->connect->prepare($sql);
+        $req->bindValue(1, $game->getTitle(), \PDO::PARAM_STR);
+        $req->bindValue(2, $game->getType(), \PDO::PARAM_STR);
+        $req->bindValue(3, $game->getPublishAt(), \PDO::PARAM_STR);
+        $console = $game->getConsole();
+        $req->bindValue(4, $console->getId(), \PDO::PARAM_INT);
+        $req->execute();
+    }
     
     /**
      * Méthode qui retourne la liste des jeux (Game)
@@ -34,6 +43,13 @@ class GameRepository
      */
     public function findAllGames(): array 
     {
+        //1 Ecrire la requête,
+        //2 Préparer la requête,
+        //3 Assigner le paramètre,
+        //4 Exécuter la requête,
+        
+
         return [];
     }
+
 }
