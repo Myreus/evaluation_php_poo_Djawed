@@ -13,11 +13,14 @@
             <input type="text" name="type" placeholder="Saisir le type de jeu">
             <input type="date" name="publish_at" placeholder="Saisir la date de publication du jeu">
             <select name="console">
-                <?php 
-                foreach($allConsoles as $key => $value){
-                    echo "<option>" . $value->getName() . "</option>";
-                } 
-                
+                <?php
+                    if (!empty($data['consoles'])) {
+                        foreach ($data['consoles'] as $key => $console): ?>
+                            <option value="<?= $console->getId() ?>">
+                                <?= $console->getName() ?>
+                            </option>
+                        <?php endforeach;
+                    }
                 ?>
             </select>
             <input type="submit" name="submit" value="Ajouter">

@@ -28,9 +28,15 @@ class ConsoleRepository
         $sql = "SELECT c.id, c.name, c.manufacturer FROM console AS c";
         $req = $this->connect->prepare($sql);
         $req->execute();
-        //5 Fetch en FETCH assoc + hydratation en Account
-        $allConsoles = $req->fetchAll(\PDO::FETCH_ASSOC);
+        $rows = $req->fetchAll(\PDO::FETCH_ASSOC);
 
-        return $allConsoles;
+        $consoles = [];
+        foreach ($rows as $row) {
+            $console = new Console($row['name'], $row['manufacturer']);
+            $console->setId($row['id']);
+            $consoles[] = $console;
+        }
+
+        return $consoles;
     }
 }

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'myreus/projet_todolist_fork_djawed',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'name' => 'myreus/evaluation_php_poo_djawed',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'b4b98505b43f7826903c7023d267e3bd8b9a02fe',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -19,10 +19,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'myreus/projet_todolist_fork_djawed' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+        'myreus/evaluation_php_poo_djawed' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'b4b98505b43f7826903c7023d267e3bd8b9a02fe',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
